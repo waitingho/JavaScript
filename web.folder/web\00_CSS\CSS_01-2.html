@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>CSS Selector</title><!--html註解-->
+        <link href="link.css" rel="stylesheet" type="text/css" /><!--color:blue-->
+        <style type="text/css">
+            /*css註解 CSS: Cascading Style Sheets*/
+            /*type selector*/
+            @import url("import.css");/*color:green*/
+            span{
+                color: red !important;/**/
+                 background: yellow !important;
+            }
+            /*inline > id > class > type > inherit*/
+        </style>
+    </head>
+
+    <body>
+        <span class="myClass" id="myId" style="color:cyan !important; background: pink;">This is a span!</span>
+    </body>
+</html>
