@@ -1,0 +1,61 @@
+﻿<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Offline Application</title>
+        <style type="text/css">
+            .online {
+                padding: 5px;
+                background: green;
+                color: white;
+            }
+            .offline {
+                padding: 5px;
+                background: red;
+                color: white;
+            }
+        </style>
+        <script src="../jquery.js"></script>
+        <script>
+            $(document).ready(init);
+            function init() {
+                $("#check").click(checkHandler);
+                //自動偵測window連線狀態
+                $(window).on("online",onlineHandler);
+                $(window).on("offline",offlineHandler);
+            }
+
+            //連線
+            function onlineHandler() {
+                alert("On line!");
+                checkHandler();
+            }
+
+            //離線
+            function offlineHandler() {
+                alert("Off line!");
+                checkHandler();
+            }
+
+            //偵測連線狀態
+            function checkHandler() {
+                var status = navigator.onLine;
+                var info = $("#status");
+
+                if (status) {
+                    info.text("Online");
+                    info.removeClass("offline");
+                    info.addClass("online");
+                } else {
+                    info.text("Offline");
+                    info.removeClass("online");
+                    info.addClass("offline");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <span id="status" class="offline">Unknow</span>
+        <button id="check">Check Connection</button>
+    </body>
+</html>

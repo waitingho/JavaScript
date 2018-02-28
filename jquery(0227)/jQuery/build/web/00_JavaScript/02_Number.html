@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>javascript</title>
+        <style type="text/css">
+        </style>
+        <script type="text/javascript">
+            var a = 3;
+            a = 3.3;//3.3
+            a = Number("3.3");//3.3
+            a = Number("3.3a");//NaN: Not a Number
+            a = Number("a3.3");//NaN: Not a Number
+            a = Number("");//0
+            a = Number(undefined);
+            a = Number(null);//0
+            a = Number(true);//1
+            a = Number(false);//0
+
+            a = parseFloat("3");//3
+            a = parseFloat("3.3");//3.3
+            a = parseFloat("3.3a");//3.3
+            a = parseFloat("a3.3");//NaN: Not a Number
+            a = parseFloat("");//NaN: Not a Number
+            a = parseFloat(undefined);//NaN: Not a Number
+            a = parseFloat(null);//NaN: Not a Number
+            a = parseFloat(true);//NaN: Not a Number
+            a = parseFloat(false);//NaN: Not a Number
+
+            a = parseInt("3");
+            a = parseInt("3.3");
+            a = parseInt("3.3a");
+
+            a = 1;
+            a = 1 + (2 * 3) - 4;
+            a = Math.abs(-3);
+            a = Math.sqrt(16);
+            a = Math.pow(2, 3);
+            a = Math.random();//0<=?<1
+            a = Math.random() * 100;
+            a = Math.round(3.2);//3
+            a = Math.floor(4.7);//4
+            a = Math.ceil(4.2);
+            a = Math.round(4.378 * 100) / 100;
+            a = Math.max(1, 2, 3, 4, 5);
+            a = Math.min(1, 2, 3, 4, 55);
+            a = Math.cos(Math.PI / 4);
+//            document.write("a = " + a + "<br/>");
+
+            var sec = 83;
+            document.write(parseInt(sec / 60) + "分" + (sec % 60) + "秒" + "<br/>");
+            document.write(Math.floor(sec / 60) + "分" + (sec % 60) + "秒"+"<br/>");
+
+//            document.write(parseInt(-3.7) + "<br/>");
+//            document.write(Math.floor(-3.7) + "<br/>");//找最小的整數
+
+        </script>
+    </head>
+
+    <body>
+        <!--<span id ="span1">3</span> + <span id ="span2">4</span> = <span id ="span3">?</span>-->
+    </body>
+    <script type="text/javascript">
+//        var s1 = document.getElementById("span1").innerHTML;
+//        var s2 = document.getElementById("span2").innerHTML;
+//        document.write("<br/>");
+//        document.write("s1 = " + s1);
+//        document.getElementById("span3").innerHTML = Number(s1)+ Number(s2);
+    </script>
+
+</html>

@@ -1,0 +1,64 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Audio Player</title>
+    
+    <style>
+		body{
+			padding:10px;
+		}
+		#title{
+			background:black;
+			color:white;
+			padding:5px 15px;
+			font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+			font-size:25px;
+			width:167px;
+			margin:0px;
+		}
+		#cover{
+			background:#EEE;
+			padding:10px;
+			border:1px solid #666;
+			width:175px;
+			box-shadow:3px 3px 5px #AAA;
+		}
+		#audioPlayer{
+			display:block;
+		}
+		#status{
+			position:absolute;
+			left:18px;
+			top:200px;
+			text-align:center;
+			width:198px;
+			background:rgba(0, 0, 0, 0.5);
+			color:white;
+			padding:5px 0 5px 0;
+		}
+	</style>
+    <script src="../jquery.js"></script>
+    <script>
+    $(document).ready(init);
+    function init(){
+    }
+    </script>
+</head>
+
+<body>
+    <h1 id="title">My World - WE ARE FM</h1>
+    <div>
+        <img id="cover" src="images/song1.jpg">
+        <!--write code here-->
+        
+    </div>
+    <div>
+        <input type="button" id="playButton" value="play">
+        <input type="button" id="pauseButton" value="pause">
+        <input type="button" id="volumeUpButton" value="+">
+        <input type="button" id="volumeDownButton" value="-">
+    </div>
+    <div id="status">Information</div>
+</body>
+</html>

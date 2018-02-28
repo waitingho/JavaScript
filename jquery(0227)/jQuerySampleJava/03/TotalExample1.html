@@ -1,0 +1,361 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>jQuery Example</title>
+		<script type="text/javascript" src="../jquery.js">
+        </script>
+        <script type="text/javascript" src="TotalExample1.js">
+        </script>
+        <style type="text/css">
+            body {
+                margin: 0;
+                padding: 0;
+                font: 12px / 1.5 Arial, Georgia, Times, "Times New Roman", serif;
+                color: black;
+                border-right: 20px solid #666;
+                background: white;
+            }
+            
+            h1 {
+                margin-top: 40px;
+                color: white;
+            }
+            
+            #header {
+                padding: 5px;
+                background-color: #666;
+                height: 100px;
+                padding-left: 100px;
+            }
+            
+            #navigation {
+                width: 100%;
+                float: left;
+                background-color: #5d7b8c;
+            }
+            
+            #navigation ul {
+                list-style-type: none;
+                margin: 0 auto;
+                padding: 0;
+                width: 90%;
+            }
+            
+            #navigation li {
+                float: left;
+            }
+            
+            .org a {
+                display: block;
+                color: white;
+                padding: 5px 8px;
+                margin-top: 10px;
+                text-decoration: none;
+                background: url(images/button_1.png) no-repeat -3px 0px;
+                width: 84px;
+                height: 25px;
+                padding-top: 15px;
+                padding-bottom: 0px;
+                text-align: center;
+            }
+            
+            .org li.active a {
+                color: #ffffff;
+                font-weight: bold;
+            }
+            
+            .org a:hover, #navigation a:active {
+                color: #fcc506;
+                background: url(images/button_1.png) no-repeat -3px -41px;
+                font-weight: bold;
+            }
+            
+            .addonClass a {
+                display: block;
+                color: white;
+                padding: 5px 8px;
+                margin-top: 10px;
+                text-decoration: none;
+                background: url(images/button_2.png) no-repeat -3px 0px;
+                width: 84px;
+                height: 25px;
+                padding-top: 15px;
+                padding-bottom: 0px;
+                text-align: center;
+            }
+            
+            .addonClass a:hover, .addonClass a:active {
+                color: #000000;
+                background: url(images/button_2.png) no-repeat -3px -41px;
+                font-weight: bold;
+            }
+            
+            #columnLeft {
+                float: left;
+                width: 160px;
+                margin-left: 10px;
+                padding-top: 1em;
+            }
+            
+            #columnRight {
+                margin: 0 0 0 200px;
+                padding: 0 5px 0 5px;
+            }
+            
+            #columnRight img {
+                width: 50%;
+                float: left;
+                margin: 10px;
+                background: #898989;
+                padding: 5px;
+                border: 3px solid #5c5c5b;
+            }
+            
+            #div1 {
+                width: 400px;
+                height: 700px;
+                overflow: auto;
+                float: left;
+                background: #e2e2e2;
+                border-left: 1px dotted gray;
+                padding: 10px;
+                position: relative;
+            }
+            
+            #div2 {
+                float: right;
+                width: 300px;
+                margin-right: 45px;
+            }
+            
+            #footer {
+                clear: both;
+                background-color: #ccc;
+                padding-bottom: 1em;
+                border-top: 1px dotted #7a7a7a;
+                padding-left: 200px;
+                height: 100px;
+            }
+            
+            #adv1 {
+                width: 275px;
+                height: 380px;
+                background: #dddbcd;
+                padding: 5px;
+                position: relative;
+            }
+            
+            #adv1 img {
+                width: 260px;
+                margin: 2px;
+                background: white;
+                padding: 5px;
+                border: 1px solid #5c5c5b;
+            }
+            
+            #adv1 h2 {
+                color: #6d9021;
+            }
+            
+            #adv1 h4 {
+                color: #0086d4;
+            }
+            
+            #cover0 {
+                position: absolute;
+                width: 273px;
+                height: 80px;
+                left: 7px;
+                top: 150px;
+                background: #2e333b;
+                filter: alpha(opacity = 40);
+                -moz-opacity: 0.4;
+                opacity: 0.4;
+            }
+            
+            #cover1 {
+                position: absolute;
+                left: 7px;
+                top: 150px;
+                color: white;
+                font-weight: bold;
+                padding-left: 20px;
+                padding-top: 10px;
+            }
+            
+            #cover1 img {
+                width: 50px;
+                border: none;
+                background: none;
+                padding: 0;
+                margin-left: 100px;
+                margin-top: 20px;
+            }
+            
+            .commentbox {
+                background-color: black;
+                color: white;
+                width: 250px;
+                padding: 10px;
+                margin-top: 10px;
+            }
+            
+            .commentfooter {
+                background: url(images/arrow.png) 20px 0 no-repeat;
+                padding-left: 58px;
+                padding-top: 1px;
+                margin-bottom: 2em;
+                font-size: 90%;
+                color: #4A4A4A;
+            }
+            
+            .myshadow {
+                float: left;
+                position: relative;
+                margin: 10px 3px 0 10px !important;
+                background: transparent url(images/drop_shadow.png) bottom right no-repeat !important;
+                background: transparent url(images/drop_shadow_ie.gif) bottom right no-repeat;
+            }
+            
+            .myshadow img {
+                padding: 4px;
+                display: block;
+                position: relative;
+                margin: -6px 6px 6px -6px;
+                background-color: #ffffff;
+                border: 1px solid #a9a9a9;
+            }
+            
+        </style>
+        
+    </head>
+    <body>
+        <div id="header">
+            <h1>RIAA to halt lawsuits, cozy up to ISPs instead</h1>
+        </div>
+        <div id="navigation" class="org">
+            <ul>
+                <li class="active">
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Blog</a>
+                </li>
+                <li>
+                    <a href="#">Our Portfolio</a>
+                </li>
+                <li>
+                    <a href="#">About Us</a>
+                </li>
+                <li>
+                    <a href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <div id="columnLeft">
+            <a href=# id="style2">Link Style 2</a>
+            | <a href=# id="style1">Link Style 1</a>
+            <h3>Music-swap lawsuits end</h3>
+            <p>
+                The music industry has a different strategy to stop illegal sharing. 
+            </p>
+            <h3>Navigation</h3>
+            <p>
+                <ul>
+                    <li>
+                        <a href="http://us.lrd.yahoo.com/_ylt=Ake0v8lwRaHDbVACjD0Lvre7MJA5/SIG=11oihpnt9/**http%3A//www.npd.com/press/releases/press_081218.html">The NPD Group</a>
+                    </li>
+                    <li>
+                        <a href="http://us.lrd.yahoo.com/_ylt=Aj6s30hfGgS7wvNIpBb7KmK7MJA5/SIG=11sq90ha9/**http%3A//online.wsj.com/article/SB122966038836021137.html">Wall Street Journal</a>
+                    </li>
+                    <li>
+                        <a href="http://us.lrd.yahoo.com/_ylt=Ai564APNZT0IgRi2MASJNCO7MJA5/SIG=11m4bm8tv/**http%3A//news.cnet.com/8301-1023_3-10127050-93.html">CNET has a copy</a>
+                    </li>
+                    <li>
+                        <a href="http://tech.yahoo.com/blogs/null/41308;_ylt=AkBs4Wbzb2Qj3wvr7KfsZU.7MJA5">Disastrous headlines</a>
+                    </li>
+                    <li>
+                        <a href="http://us.lrd.yahoo.com/_ylt=AtMdCXQOx8Ci.dy8ijC_so27MJA5/SIG=138b2k0bl/**http%3A//www.engadget.com/2008/12/19/riaa-finds-its-soul-will-stop-suing-individuals-for-music-pirac/">Engadget's headline</a>
+                    </li>
+                </ul>
+            </p>
+            <div class="myshadow">
+                <img src="images/ipod.jpg" width="138" height="175" alt="iPod" />
+            </div> Overall, I think the Apple iPod touch is on the right path in terms of hardware and design. Software I see much room for improvement, or at least bringing it to the same levels of the iPhone." Read More 
+        </div>
+        <div id="columnRight">
+            <div id="div1">
+                <p>
+                    <img src=images/mobil.png />At last, the music industry admits what we've known for years: That filing music-swapping lawsuits against teenagers, little old ladies, and corpses is a fool's errand (not to mention an expensive headache for the defendants). But don't worry—the RIAA has something new up its sleeves.
+                </p>
+                <p>
+                    The new strategy (as reported by the Wall Street Journal): If the music industry finds out that you're swapping music files online, it'll send an e-mail to your ISP (agreements have already hashed out agreements with "some" unnamed service providers, apparently), which will in turn forward the message to you—probably with a little "P.S." asking you to stop. [Update: CNET has a copy of the RIAA's form letter to ISPs.]
+                </p>
+                <p>
+                    If you don't stop, well ... your service provider probably won't sue you, but it might slow down your broadband connection, or cut off your service altogether. 
+                    So, why has the RIAA changed the play? Well, maybe it's been looking at reports like this one from the NPD Group, which shows that U.S. CD sales continue to slide, while the number of tunes shared via P2P sites continues to increase, despite all the litigation. 
+                    And then there's the disastrous headlines, as the RIAA relentlessly tracked down and sued tens of thousands of alleged music pirates. Among them: Kids, octogenarians, and a few dead people.
+                </p>
+                <p>
+                    Reaction to the news? Mixed. Engadget's headline reads (in part): "RIAA finds its soul," with the story noting that while the RIAA reserves the right to go after "heavy uploaders or repeat offenders ... it appears that single mothers are in the clear."
+                    All Things Digital has a darker outlook, speculating that ISPs—which "care about the cost of moving lots of data around … [and] want to make money by selling, renting, or just offering up Hollywood's movies and TV shows to subscribers"—might be more than content to "cut off file-sharers … [or] simply [charge] heavy file-sharers a lot of money."
+                </p>
+                <p>
+                    Reaction to the news? Mixed. Engadget's headline reads (in part): "RIAA finds its soul," with the story noting that while the RIAA reserves the right to go after "heavy uploaders or repeat offenders ... it appears that single mothers are in the clear."
+                    All Things Digital has a darker outlook, speculating that ISPs—which "care about the cost of moving lots of data around … [and] want to make money by selling, renting, or just offering up Hollywood's movies and TV shows to subscribers"—might be more than content to "cut off file-sharers … [or] simply [charge] heavy file-sharers a lot of money."
+                </p>
+                <p>
+                    Reaction to the news? Mixed. Engadget's headline reads (in part): "RIAA finds its soul," with the story noting that while the RIAA reserves the right to go after "heavy uploaders or repeat offenders ... it appears that single mothers are in the clear."
+                    All Things Digital has a darker outlook, speculating that ISPs—which "care about the cost of moving lots of data around … [and] want to make money by selling, renting, or just offering up Hollywood's movies and TV shows to subscribers"—might be more than content to "cut off file-sharers … [or] simply [charge] heavy file-sharers a lot of money."
+                </p>
+                <p>
+                    Reaction to the news? Mixed. Engadget's headline reads (in part): "RIAA finds its soul," with the story noting that while the RIAA reserves the right to go after "heavy uploaders or repeat offenders ... it appears that single mothers are in the clear."
+                    All Things Digital has a darker outlook, speculating that ISPs—which "care about the cost of moving lots of data around … [and] want to make money by selling, renting, or just offering up Hollywood's movies and TV shows to subscribers"—might be more than content to "cut off file-sharers … [or] simply [charge] heavy file-sharers a lot of money."
+                </p>
+                <p>
+                    Reaction to the news? Mixed. Engadget's headline reads (in part): "RIAA finds its soul," with the story noting that while the RIAA reserves the right to go after "heavy uploaders or repeat offenders ... it appears that single mothers are in the clear."
+                    All Things Digital has a darker outlook, speculating that ISPs—which "care about the cost of moving lots of data around … [and] want to make money by selling, renting, or just offering up Hollywood's movies and TV shows to subscribers"—might be more than content to "cut off file-sharers … [or] simply [charge] heavy file-sharers a lot of money."
+                </p>
+                <p>
+                    Reaction to the news? Mixed. Engadget's headline reads (in part): "RIAA finds its soul," with the story noting that while the RIAA reserves the right to go after "heavy uploaders or repeat offenders ... it appears that single mothers are in the clear."
+                    All Things Digital has a darker outlook, speculating that ISPs—which "care about the cost of moving lots of data around … [and] want to make money by selling, renting, or just offering up Hollywood's movies and TV shows to subscribers"—might be more than content to "cut off file-sharers … [or] simply [charge] heavy file-sharers a lot of money."
+                </p>
+                <p>
+                    Reaction to the news? Mixed. Engadget's headline reads (in part): "RIAA finds its soul," with the story noting that while the RIAA reserves the right to go after "heavy uploaders or repeat offenders ... it appears that single mothers are in the clear."
+                    All Things Digital has a darker outlook, speculating that ISPs—which "care about the cost of moving lots of data around … [and] want to make money by selling, renting, or just offering up Hollywood's movies and TV shows to subscribers"—might be more than content to "cut off file-sharers … [or] simply [charge] heavy file-sharers a lot of money."
+                </p>
+            </div>
+            <div id="div2">
+                <div id="adv1">
+                    <h2>Videos</h2>
+                    <img src="images/adv1.jpg" /><h4>CNET Video</h4>
+                    Though its volume could be just a bit louder, the Motorola i776 is a decent Nextel phone. Just don't ...
+                    <p id="cover0">
+                        Click Here Play
+                    </p>
+                    <p id="cover1">
+                        Click To Play !!<img src="images/btn_video_play.jpg" />
+                    </p>
+                </div>
+                <div class="commentbox">
+                    They finally start to make some sense. The giver pays, the receiver takes. You go after someone who shares, you don't go after someone who downloads. If someone is so generous to share, that someone pays for everything. Just like TV, you can watch the show for free because someone sponsored. They don't go after the watchers.
+                </div>
+                <div class="commentfooter">
+                    Posted by hotel528 on Fri Dec 19, 2008 5:02PM EST 
+                </div>
+                <div class="commentbox">
+                    If the masses are stupid enough to follow this rule and stop downloading music it would just show how dumb our society is. 
+                </div>
+                <div class="commentfooter">
+                    Posted by pjuice2000 on Fri Dec 19, 2008 5:54PM EST 
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <p>
+                www.musicSwap.com 
+            </p>
+        </div>
+    </body>
+</html>

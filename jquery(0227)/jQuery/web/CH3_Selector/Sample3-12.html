@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Pseudo</title>
+<style>
+#subscribe{
+	width:400px;
+	height:220px;
+	background:#FC6;
+	padding:20px;
+}
+
+#subscribe h1{
+	margin:0;
+}
+
+/*write code here*/
+</style>
+<script src="../jquery.js"></script>
+<script>
+$(document).ready(init);
+function init(){
+}
+</script>
+</head>
+
+<body>
+    <div id="subscribe">
+        <h1>personal information</h1>
+        <p>
+            <label>Name</label>
+            <input id="name" name="name" type="text">
+        </p>
+        <p>
+            <label>Phone</label>
+            <input id="phone" name="phone" type="text">
+        </p>
+        <p>
+            <input id="agree" name="agree" type="checkbox" value="subscribe" checked>
+            Please send me monthly discounts!
+        </p>
+        <p>
+            <label>Email</label>
+            <input id="email" name="email" type="text">
+        </p>
+    </div>
+</body>
+</html>

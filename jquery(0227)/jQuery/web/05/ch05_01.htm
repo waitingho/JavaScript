@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>jQuery Filter</title>
+        <style type="text/css">
+            div{
+                width:100px;
+                height:50px;
+                border:1px solid gray;
+                padding:10px;
+                background:#666;
+                color:white;
+            }
+
+        </style>
+
+        <script type="text/javascript" src="../jquery.js"></script>
+        <script type="text/javascript">
+            $(document).ready(init);
+            function init()
+            {
+                //	alert($("div").size());//5 //3.x do not use
+                //        alert($("div").length);//5
+                //        alert($("#target").length);//1
+
+                //        alert(document.getElementById("target").innerHTML);//javascript 物件 使用 javascript指令
+                //        alert($("#target").text());//jQuery 物件 使用 jQuery指令
+                //        
+                //        alert(document.getElementById("target").text());//javascript 物件 使用 jQuery指令 //no
+                //        alert($(document.getElementById("target")).text());//封包javaScript 物件 成為 jQuery 物件 使用 jQuery 指令
+                //        
+                //        alert($("#target").innerHTML);//jQuery 物件 使用 javaScript 指令 //NO
+                //        alert($("#target")[0].innerHTML);//jQuery 物件 取出  javaScript 物件 使用 javaScript 指令
+                alert($("div")[1].innerHTML);
+
+
+            }
+        </script>  
+    </head>
+
+    <body>
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/hyChw3-Uj7s?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div>This is a div1</div>
+
+
+        <div id="target">This is a div2</div>
+
+        <div>This is a div3</div>
+        <div>This is a div4</div>
+        <div>This is a div5</div>
+    </body>
+</html>

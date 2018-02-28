@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>CSS Table</title>
+	<style type="text/css">
+            .first{
+                border:2px solid black;
+            }
+            .first td{
+                border: 1px solid gray;
+            }
+            .second{
+                border: 2px solid black;
+                border-spacing: 10px;
+                border-collapse: collapse;
+                width: 600px;
+                caption-side: bottom;
+            }
+            .second td{
+                border: 1px solid black;
+                height: 60px;
+                text-align: center;
+                vertical-align: middle;
+            }
+	</style>
+</head>
+
+<body>
+	<div class="testdiv">
+	  <table class="first">
+		<tr><!--table row-->
+		  <td>1</td><!--table data-->
+		  <td>2</td>
+		</tr>
+		<tr>
+		  <td>3</td>
+		  <td>4</td>
+		</tr>
+	  </table>
+	  <br>
+	  <table class="second" >
+		<tr>
+		  <td>1</td>
+		  <td>2</td>
+		</tr>
+		<tr>
+		  <td>3</td>
+		  <td>4</td>
+		</tr>
+	  </table>
+          </br>
+	</div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>History</title>
+    <style>
+		a{
+			text-decoration:none;
+			padding:5px;
+		}
+		
+		a:hover{
+			background:red;
+			color:white;
+		}
+    </style>
+    
+    <script src="../jquery.js"></script>
+    <script>
+    var data = {User1:{name:"Ken",age:21},
+                User2:{name:"Mary",age:22},
+                User3:{name:"Carol",age:23},
+                User4:{name:"Tony",age:24}
+    }
+	
+    $(document).ready(init);
+    function init(){
+        if(history){
+            $("#status").text("Support");
+            $("#examples").click(clickHandler);
+        }else{
+            $("#status").text("Not support");
+        }
+        //按鈕行為註冊
+            
+    }
+    function backHandler(){
+    
+    }
+    
+    function forwardHandler(){
+        
+    }
+    
+    function clickHandler(e){
+        e.preventDefault();
+        if(e.target.nodeName == "A")
+        {
+            var title = $(e.target).text();
+            var url = e.target.getAttribute("href");
+            history.pushState(data[title],null, url);
+            //歷史紀錄更新
+            
+        }
+    }
+    
+    //歷史紀錄更新
+    function updateHistory(){
+    
+    }
+    //偵聽狀態改變
+	function popstateHandler(){
+        
+    }
+    </script>
+
+</head>
+
+<body>
+
+<article>
+  <p id="status">HTML5 History API not supported</p>
+  <p>Use the back and forward buttons in your browser to navigate the history.</p>
+  <ul id="examples">
+    <li><a href="first">User1</a></li>
+    <li><a href="second">User2</a></li>
+    <li><a href="third">User3</a></li>
+    <li><a href="fourth">User4</a></li>
+  </ul>
+  <div id="output"></div>
+</article>
+
+</body>
+</html>

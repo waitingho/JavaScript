@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Javascript</title>
+        <style type="text/css">
+        </style>
+        <script type="text/javascript">
+            var a = true;
+            a = false;
+            a = Boolean(1);//true
+            a = Boolean(-1);//true
+            a = Boolean(0);//false
+            a = Boolean("abc");//true
+            a = Boolean("  ");//true
+            a = Boolean("");//false
+            a = Boolean(null);//false
+            a = Boolean(undefined);//false
+
+            var x = 5;
+            var y = "5";
+            var z = 3;
+            a = x > z;//true
+            //< <= == != >= >
+            a = x == y;//true
+            a = x === y;//false
+            a = x != y;//false
+            a = x !== y;//true
+            
+            a = (z > 3) && (x > 1);//false
+            a = (x > 1) && (z > 3);//&& and //false
+            
+             a = (x > 1) || (z > 3);//|| or //true
+             a = (z > 3) || (x > 1);//|| or //true
+             
+            document.write("a=" + a + "<br />");
+            
+            var c = 3;
+            var d = 5;
+            a= c & d;//1
+            a= c | d;//7
+            
+            a = 31;//31 //10
+            a = 031;//25 //8
+            a = 0x00ff00;//49 //16
+            
+            a = 2 << 2;
+            document.write("a=" + a + "<br />");
+            //document.write("a=" + (65535-255) + "<br />");
+        </script>
+    </head>
+
+    <body>
+    </body>
+</html>

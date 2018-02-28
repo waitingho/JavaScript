@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Javascript</title>
+        <style>
+
+        </style>
+        <script>//todo
+            window.addEventListener("load", init);
+            function init() {
+                var myBtn1 = document.getElementById("outer");
+                outer.addEventListener("click",outerHandler);
+                var inner = document.getElementById("inner");
+                
+            }
+             function outerHandler(){
+                 
+             }
+            function clickHandler() {
+                console.log("this:" + this);
+            }
+
+        </script>
+    </head>
+    <body>
+        <div id="outer">Outer
+            <div id="inner">Inner</div>
+        </div>
+    </body>
+</html>
+
+
+
+

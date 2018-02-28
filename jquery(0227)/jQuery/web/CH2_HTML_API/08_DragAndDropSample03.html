@@ -1,0 +1,59 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Drag and Drop</title>
+    
+    <style>
+    .srp{
+        border:1px solid black;
+        width:180px;
+        height:180px;
+        float:left;
+        text-align:center;
+    }
+    .srp img{
+        width:150px;
+    }
+    </style>
+    <script src="../jquery.js"></script>
+    <script>
+    var dragSupport;
+    var messageObj;
+    
+    function isDragEnabled(e){
+        if("draggable" in $("<span>")[0]){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    $(document).ready(init);
+    function init(){
+        messageObj = $(".message");
+        if(isDragEnabled()){
+            messageObj.text("Drag and drop support.");
+        }else{
+            messageObj.text("Drag and drop not support.");
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <div id="gameContainer">
+        <h1>Scissors, Rock and Paper game</h1>
+        <p class="message">Game Start!!!</p>
+        <div id="gameArea">
+            <div id="srp1" class="srp">
+                <img id="dragImage" src="images/Scissors.png" draggable="true" alt="">
+                <footer>Scissors</footer>
+            </div>
+            <div class="srp">
+                <img id="dropZone" src="images/DropZone.png" draggable="false" alt="">
+                <footer>Drop Here!!!</footer>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

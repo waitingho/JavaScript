@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>javascript</title>
+        <style type="text/css">
+            table{ 
+                
+                width: 800px;
+                border:2px solid black;
+                border-collapse: collapse;
+            }
+            td{
+                border:2px solid gray;
+                 height:40px;
+                text-align: center;
+                vertical-align: middle;
+            }
+            .tr1{
+                
+                background: pink;
+            }
+        </style>
+        <script type="text/javascript">
+
+            /*var i = 9;//會被複寫 根本不存在
+             for (var i = 0; i < 3; i++) {
+             document.write(i + "<br/>")
+             }
+             document.write("i=" + i + "<br/>")*/
+
+
+//            for (var i = 1; i < 10; i++) {
+//                
+//                for (var j = 1; j < 10; j++) {
+//                    document.write(i + "*" + j + "=" );
+//                    if(i*j<10)document.write("  ");
+//                     document.write((i * j) + "\t");
+//                }document.write("<br/>");
+//            }
+            document.write("<table>");
+            for (var i = 1; i < 10; i++) {
+                if (i % 2 == 0) {
+                    document.write("<tr class='tr1'>");
+                } else {
+                    document.write("<tr class='tr2'>");
+                }
+                for (var j = 1; j < 10; j++) {
+//                    document.write();
+                    document.write("<td>" + i + "*" + j + "=");
+                    if (i * j < 10)
+                        document.write("  ");
+                    document.write((i * j) + "</td>");
+//                    document.write();
+                }
+                document.write("</tr>");
+            }
+            document.write("</table>");
+        </script>
+
+    </head>
+
+    <body>
+
+    </body>
+
+</html>

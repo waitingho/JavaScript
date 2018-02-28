@@ -1,0 +1,62 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Web Font</title>
+
+<style>
+#logo_container{
+	width:430px;
+	height:200px;
+	border:1px solid black;
+	padding:10px;
+	background:#EEE;
+	margin:50px auto;
+}
+
+@font-face{
+	font-family:"ChunkFiveRegular";
+	src:url("assets/Chunkfive-webfont.eot");
+	src:local("☺"), url("assets/Chunkfive-webfont.woff") format("woff"),
+				    url("assets/Chunkfive-webfont.ttf") format("truetype"),
+					url("assets/Chunkfive-webfont.svg#webfont4CzPTNtF") format("svg");
+	font-weight:normal;
+	font-style:normal;
+}
+
+h1{
+	font-family:ChunkFiveRegular, Georgia, "Times New Roman", Times, serif;
+	font-size:45px;
+	text-transform:uppercase;
+	color:#9C0;
+	margin:0;
+	/*write code here*/
+
+}
+
+p{
+	font-family:Arial, Helvetica, sans-serif;
+	text-align:justify;
+	line-height:1.5;
+	margin:0;
+	
+	/*write code here*/
+	
+	font-size:16px;
+	text-indent:2em;
+	padding-top:10px;
+	font-weight:bold;
+}
+</style>
+
+</head>
+
+<body>
+    <div id="logo_container">
+        <h1>An HTML5 Logo</h1>
+        <p>
+            It stands strong and true, resilient and universal as the markup you write. It shines as bright and as bold as the forward-thinking, dedicated web developers you are. It's the standard's standard, a pennant for progress. And it certainly doesn't use tables for layout.
+        </p>
+    </div>
+</body>
+</html>

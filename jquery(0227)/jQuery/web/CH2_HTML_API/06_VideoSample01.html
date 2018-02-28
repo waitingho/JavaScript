@@ -1,0 +1,94 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Video Player</title>
+    
+    <style>
+		#videoPlayer{
+			background:#CCC;
+			padding:10px;
+			border:1px solid #666;
+			box-shadow:5px 5px 5px #666;
+			margin-bottom:10px;
+		}
+		
+		#fullscreenButton{
+			background:red;
+			color:white;
+		}
+    </style>
+    
+    <script src="../jquery.js"></script>
+    <script>
+		var video = undefined;
+		$(document).ready(init);
+		function init(){
+			$("#playButton").click(playHandler);
+			$("#pauseButton").click(pauseHandler);
+			$("#volumeUpButton").click(volumeUpHandler);
+			$("#volumeDownButton").click(volumeDownHandler);
+			
+			//video 事件註冊
+			
+			//全螢幕按鈕 事件註冊
+			
+			
+		}
+		//播放
+		function playHandler()
+		{
+			
+		}
+		//暫停
+		function pauseHandler()
+		{
+		
+		}
+		//加音量
+		function volumeUpHandler()
+		{
+			
+		}
+		//減音量
+		function volumeDownHandler()
+		{
+			
+		}
+		//播放開始
+		function startPlayHandler()
+		{
+			
+		}
+		//播放歷程
+		function timeupdateHandler()
+		{
+			
+		}
+		//播放結束
+		function endedHandler()
+		{
+			
+		}
+		//全螢幕
+		function fullscreenHandler(e)
+		{
+			
+		}
+    </script>
+</head>
+
+<body>
+    <div>
+        <input type="button" id="playButton" value="Play">
+        <input type="button" id="pauseButton" value="Pause">
+        <input type="button" id="volumeUpButton" value="+">
+        <input type="button" id="volumeDownButton" value="-">
+        <input type="button" id="fullscreenButton" value="Full Screen">
+    </div>
+    
+    <div id="status">Information</div>
+    <!--write code here-->
+    
+</body>
+</html>

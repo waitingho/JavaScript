@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Javascript</title>
+        <style>
+
+        </style>
+
+    </head>
+    <body>
+        <button value="myValue1" id="myBtn1" onclick="clickHandler()">btn 1</button>
+        <button value="myValue2" id="myBtn2">btn 2</button>
+        <script>
+            function clickHandler() {
+                console.log("this:" + this + "value" + this.value);
+            }
+            var myBtn2 = document.getElementById("myBtn2");
+            myBtn2.onclick = clickHandler;
+        </script>
+    </body>
+</html>
+
+
+
+

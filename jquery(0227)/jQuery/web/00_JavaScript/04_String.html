@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>javascript</title>
+        <style type="text/css">
+        </style>
+        <script type="text/javascript">
+            var a = "abcdefg";
+            var b = 'zxc';
+            a = a + b;
+            a = "Tony's book";
+            a = "Tony\'s \"book\"";
+            document.write("a=" + a + "<br/>");
+
+            a = String(123);
+            var c = 456;
+            a = c.toString();
+            document.write("a=" + typeof (a) + "<br/>");
+
+            var a = "為他人減少煩惱,為自己減少煩惱"
+            document.write("a=" + a + "<br/>");
+            document.write("a=" + a.length + "<br/>");
+            document.write("a=" + a.charAt(2) + "<br/>");//人 從0開始
+            document.write("a=" + a.slice(2, 5) + "<br/>");
+            document.write("a=" + a.indexOf("人") + "<br/>");
+            document.write("a=" + a.indexOf("減", 4) + "<br/>");
+            document.write("a="+a.indexOf("減少",4)+"<br/>");
+            
+            a = "aBcD";
+            document.write("a=" + a + "<br/>");
+            document.write("a=" + a.toLocaleUpperCase() + "<br/>");
+            document.write("a=" + a.toLowerCase() + "<br/>");
+
+            a = "為他人減少煩惱,為自己減少煩惱"
+            document.write("a=" + a.substr(2, 5) + "<br/>");//subsrt(start,length)
+            document.write("a=" + a.substring(2, 5) + "<br/>");
+
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+
+</html>

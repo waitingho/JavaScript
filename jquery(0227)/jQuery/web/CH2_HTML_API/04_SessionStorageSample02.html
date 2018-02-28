@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Session Stroage</title>
+    <style>
+		div {
+			padding: 5px;
+		}
+		label {
+			display: block;
+			width: 60px;
+			text-align: right;
+			padding-right: 5px;
+			float: left;
+			font-weight: bold;
+		}
+		input[type="text"] {
+			border: none;
+			border-bottom: 1px dashed black;
+		}
+    </style>
+    <script src="../jquery.js"></script>
+    <script>
+    $(document).ready(init);
+    function init(){
+    }
+    </script>
+</head>
+
+<body>
+    <h1 id="status">status</h1>
+    <div>
+        <label>Name:</label>
+        <input type="text" id="fisrstName"/>
+    </div>
+    <div>
+        <label>Habit:</label>
+        <input type="text" id="habit"/>
+    </div>
+    <div>
+        <input type="button" id="saveButton" value="Save"/>
+        <input type="button" id="clearButton" value="Clear"/>
+    </div>
+</body>
+</html>
