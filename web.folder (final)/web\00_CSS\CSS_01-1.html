@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>CSS Selector</title><!--html註解-->
+        <style type="text/css">
+            /*css註解 CSS: Cascading Style Sheets*/
+            /*type selector*/
+            body{
+                color:red;
+            }
+        </style>
+        <style type="text/css">
+             .myClass{
+                color:orange;
+            }
+          body{
+                color:green;
+            }
+            span{
+                color:pink;
+            }
+           p{
+                color:brown;
+            }
+             /*class selector*/
+           .myClass{
+                color:orange;
+            }
+           .myClass1{
+                color:cyan;
+            }
+            /*class順序以style中為主*/
+             /*ID selector*/
+           #myId{
+                color:magenta;
+            }
+            /*id > class > type > inherit*/
+        </style>
+    </head>
+
+    <body>
+        <p class="myClass" id="myId1">This is a p!</p>
+        <p>This is a p!<span>This is a span!</span></p>
+        <div class='myClass'>This is a div!</div>
+        <div>This is a div!</div>
+        <span class="myClass1 myClass" id="myId">This is a span!</span>
+        <span class="myClass myClass1">This is a span!</span>
+        <span>This is a span!</span>	
+    </body>
+</html>

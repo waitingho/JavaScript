@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>javascript</title>
+        <style type="text/css">
+
+        </style>
+        <script type="text/javascript">
+            /*   function sayHello(myName, myTime) {
+             document.write("Hello " + myName + " " + myTime + "<br/>");
+             }
+             sayHello("Leo", "morning");
+             sayHello("Ken", "evening");
+             sayHello("Tony", "morning", 123);
+             sayHello("Leo", 8989)
+             
+             
+             function add(a, b) {
+             document.write("my first line" + "<br/>");
+             return a + b;
+             document.write("my second line" + "<br/>");
+             }
+             var result = add(3, 5);
+             document.write("result=" + result + "<br/>");
+             
+             result = add(6, 1)
+             document.write("result=" + result + "<br/>");*/
+
+            var mainStr = "main string";
+            document.write("Main call mainStr = " + mainStr + "<br />");//main string
+            function f1() {
+                var f1Str = "f1 string";
+                document.write("F1 call mainStr = " + mainStr + "<br />");//main string
+                document.write("F1 call f1Str = " + f1Str + "<br />");//f1 string
+                mainStr = "f1 modified!";
+            }
+            f1();
+            //document.write("Main call f1Str = " + f1Str + "<br />");//
+            function f2() {
+                document.write("F2 call mainStr = " + mainStr + "<br />");// f1 modified!
+                //document.write("F2 call f1Str = " + f1Str + "<br />");//
+            }
+        </script>
+
+    </head>
+
+    <body>
+
+    </body>
+
+</html>

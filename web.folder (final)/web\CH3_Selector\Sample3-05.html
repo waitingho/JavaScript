@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Selector</title>
+        <style>
+            body{
+                margin:0;
+                padding:0;
+            }
+
+            #wrapper{
+                margin:0 auto;
+                width:800px;
+            }
+
+            /*HEADER*/
+            /*write code here*/
+            header h1{
+                background: #09c;
+                color:white;
+                font-size: 70px;
+                font-weight: 900;
+                letter-spacing: 5px;
+                text-align: center;
+                padding: 10px;
+                text-transform: uppercase;
+            }
+
+            /*ALBUM*/
+            #album{
+                width:400px;
+                float:left;
+            }
+
+            /*IMAGE*/
+            /*write code here*/
+            #album>img{
+                width:300px;
+                background:#eee;
+                padding: 10px;
+                margin: 0px auto;
+                display: block;
+            }
+            .thumbsCaption{
+                text-align:center;
+                margin:5px;
+                font:12px Verdana, Geneva, sans-serif;
+            }
+
+            .enlargeThumbs{
+                list-style:none;
+            }
+
+            .enlargeThumbs li{
+                float:left;
+            }
+
+            .enlargeThumbs img{
+                cursor:pointer;
+                border:5px solid #ccc;
+                margin:0 10px 0 10px;
+            }
+
+            /*DESCRIPTION*/
+            #description{
+                width:400px;
+                float:left;
+            }
+
+            #description h1{
+                margin:0;
+                font:25px Tahoma, Geneva, sans-serif;
+                color:#06c;
+                font-weight:bold;
+                text-transform:uppercase;
+            }
+
+            #description h1+h2{
+                margin:0;
+                font:16px "Arial Black", Gadget, sans-serif;
+            }
+
+            #description p{
+                font:16px/1.5 Arial, Helvetica, sans-serif;
+                text-align:justify;
+            }
+
+            /*FOOTER*/
+            /*write code here*/
+            footer{
+                clear:both;
+                padding:20px 0px;
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <header>
+                <h1>HTML5 Poster</h1>
+            </header>
+            <section>
+                <div id="album">
+                    <img src="images/HTML5_poster.png" alt="HTML Illustration">
+                    <p class="thumbsCaption"> Take a closer look below:</p>
+                    <ul class="enlargeThumbs">
+                        <li><img src="images/clouds_thumb.jpg"></li>
+                        <li><img src="images/type_thumb.jpg"></li>
+                        <li><img src="images/helicopters_thumb.jpg"></li>
+                        <li><img src="images/html5_thumb.jpg"></li>
+                    </ul>
+                </div>
+                <article id="description">
+                    <h1>About the illustration</h1>
+                    <h2>Created by artist: Will Phillips Jr.</h2>
+                    <p>In honor of the new <a href="http://www.w3.org/html/logo/" target="_blank" title="Visit the new logo's official web page">HTML5 logo</a> recently released by the W3C, I am proud to present this illustration. Inspired by the logo's design (created by <a href="http://ocupop.com/" target="_blank">Ocupop</a>), and eager to embrace and support the progress of new web technologies, I was moved to create this artwork. With this piece I wished to carry on the message it conveys as something new and bold, that shows the magnitude of this movement and how it relates to the future of the web. 
+                    </p>
+                    <hr id="textDivider">
+                    <h1>Support the movement.</h1>
+                    <p>Show your support! You know this would look good in your office, your lab, your room, and even your bathroom. Well, maybe not there. But you get the idea. Show it off, make it a conversation piece. In doing so, <em>you</em> are helping to spread the word about HTML5 and the new ways of the web world. Order your poster below!
+                    </p>
+                </article>
+            </section>
+            <footer>
+                <p>This site is only for CSS3 training.</p>
+            </footer>
+        </div>
+    </body>
+</html>

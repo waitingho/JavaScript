@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+        <style>
+        </style>
+        <script>
+            //var value="Hello!";
+            //window.onload = init;
+            window.addEventListener("load", init);
+            function init() {
+                var myBtn1 = document.getElementById("myBtn1");
+                myBtn1.onclick = clickHandler;
+                myBtn1.onclick = secondHandler;
+
+                var myBtn2 = document.getElementById("myBtn2");
+                myBtn2.myData="Hello";
+                myBtn2.myFun=function (){alert("World!")};
+                myBtn2.addEventListener("click",clickHandler);
+                myBtn2.addEventListener("click",secondHandler);
+                
+                //document.getElementById("myBtn2").addEventListener("click",clickHandler);
+                //$("#myBtn2").on("click",clickHandler);
+            }
+            function clickHandler() {
+                console.log("this:" + this + " value:" + this.value+" this.myData:"+this.myData);
+            }
+            function secondHandler() {
+                this.removeEventListener("click",secondHandler);
+                console.log("Second Handler!");
+                this.myFun();
+            }
+        </script>
+    </head>
+    <body>
+        <button value="myValue1" id="myBtn1">My btn 1</button>
+        <button value="myValue2" id="myBtn2">My btn 2</button>
+    </body>
+</html>
+

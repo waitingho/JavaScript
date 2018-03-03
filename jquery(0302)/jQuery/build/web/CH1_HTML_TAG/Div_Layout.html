@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+    <head><!--todo格式標籤-->
+        <meta charset="UTF-8">
+        <title>Div Layout HTML4</title>
+        <style type="text/css">
+            body{
+                margin:0px;
+                padding:0px;
+            }
+            
+            div,header,footer,article,aside,nav,section{
+                    border:2px #333 solid;
+                    margin:5px;
+            }
+            #main{
+                    width:90%;
+                    min-width:850px;
+                    max-width:950px;
+                    margin:auto;
+                    background:#eee;
+            }
+            .header,.footer{
+                    height:100px;
+            }
+            .content{
+                    height:600px;
+            }
+            .level1{
+                    background:#ccc;
+            }
+            .level2{
+                    background:#aaa;
+                    float:left;
+            }
+            .content1{
+                    width:15%;
+                    height:74%;
+            }
+            .content2{
+                    width:81.5%;
+                    height:50%;
+            }
+            .content3{
+                    width:81.5%;
+                    height:21.5%;
+            }
+            .content4{
+                    width:98%;
+                    height:100px;
+                    overflow:auto;
+            }
+            .level3{
+                    background:#888;
+                    float:left;
+            }
+            .content2inner1{
+                    width:98%;
+                    height:20%;
+            }
+            .content2inner2{
+                    width:98%;
+                    height:65%;
+            }
+            .content3inner1{
+                    width:30%;
+                    height:75%;
+            }
+            .content3inner2{
+                    width:66%;
+                    height:75%;
+            }
+            ul{
+                    list-style-type:none;
+            }
+            li a{	
+                    text-decoration:none;
+                    color:black;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <header id="main">
+            <div class="header level1">&lt;header&gt;公司logo/動畫 </div>
+            <section class="content level1">content <br/>
+                <div class="content1 level2">&lt;ul&gt;content1 公司連結<br/>
+                <ul>
+                        <li><a href="#">link01</a></li>
+                        <li><a href="#">link02</a></li>
+                        <li><a href="#">link03</a></li>
+                        <li><a href="#">link04</a></li>
+                </ul>
+                </div>
+
+                <div class="content2 level2">content2 <br/>
+                <div class="content2inner1 level3">&lt;h1&gt;文章標題 </div>
+                <div class="content2inner2 level3">&lt;h2&gt;文章內文 <br><br>
+                &lt;h2&gt;<br>&lt;p&gt;
+                </div>
+                </div>
+
+                <div class="content3 level2">content3 <br/>
+                <div class="content3inner1 level3">&lt;img&gt;content3 inner1  <br>
+                         照片/圖表<br> 
+                </div>
+                <div class="content3inner2 level3">&lt;dl&gt;content3 inner2 <br>
+                        專有名詞
+                </div>		
+                </div>
+
+                <div class="content4 level2">content4 
+                        <p>留言 1</p><p>comment 2</p><p>comment 3</p><p>comment 4</p>
+                </div>
+            </section>
+            <div class="footer level1">&lt;footer&gt;公司聯絡資訊 <br><br></div>
+        </header>
+    </body>
+</html>

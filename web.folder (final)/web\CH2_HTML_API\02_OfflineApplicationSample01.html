@@ -1,0 +1,49 @@
+﻿<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Offline Application</title>
+        <style type="text/css">
+            .offline {
+                padding: 5px;
+                background: red;
+                color: white;
+            }
+
+            .online {
+                padding: 5px;
+                background: green;
+                color: white;
+            }
+        </style>
+        <script src="../jquery.js"></script>
+        <script>
+            $(document).ready(init);
+            function init() {
+                //檢查有無支援navigator.onLine
+                if(navigator.onLine != undefined){
+                    //alert("Support!");
+                    $("#check").click(checkHandler);
+                }else{
+                    alert("Not support!");
+                }
+            }
+
+            //偵測連線狀態
+            function checkHandler() {
+                if(navigator.onLine){
+                    $("#status").text("On line!");
+                    $("#status").addClass("online");
+                }else{
+                    $("#status").text("Off line!");
+                    $("#status").removeClass("online");
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <span id="status" class="offline">Unknow</span>
+        <button id="check">Check Connection</button>
+    </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML5 Explore</title>
+        <style type="text/css">
+            /*html5 display rule*/
+            article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+                display: block;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header id="pageHeader">
+            <hgroup>
+                <h1>HTML5 Feature List</h1>
+                <h2>HTML5 Tags</h2>
+                <h2>HTML5 APIs</h2>
+                <h1>CSS3 Feature List</h1>
+                <h2>CSS3 Selectors</h2>
+                <h2>CSS3 Effects</h2>
+            </hgroup>
+            <nav id="pageNav">
+                <ul id="siteNav">
+                    <li><a href="#">Introduction</a></li>
+                    <li><a href="#">Showcase</a></li>
+                    <li><a href="#">Download</a></li>
+                    <li><a href="#">Contact US</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="info">
+            <header>
+                <h1>Build It And They Will Come</h1>
+            </header>
+            <article>
+                <h2>The Tech­nology</h2>
+                <p>Imagination, meet implementation. HTML5 is the cornerstone of the W3C's open web platform; a framework designed to support innovation and foster the full potential the web has to offer. Heralding this revolutionary collection of tools and standards, the HTML5 identity system provides the visual vocabulary to clearly classify and communicate our collective efforts.</p>
+                <h2>The Movement</h2>
+                <p>You're excited about HTML5; we are too. You've not just been enjoying the HTML5-powered web already — you're building it! As adoption and inspiration spreads, the web community will find creative ways to apply HTML5 and related technologies, spark trends, and capture best practices. As momentum builds, we hope you bring this logo along for the ride and paint the world orange.</p>
+            </article>
+        </section>
+        <section id="news">
+            <h1>Free Stickers!</h1>
+            <h2>Free Information</h2>
+            <img src="images/html5-stickers.png" alt="">
+            <p>Please send a No.10 business envelope to accommodate all three stickers, see below for more details and international shipping. Make sure to include enough postage to return a sticker pack via U.S. mail. It's less than one ounce, so a standard $0.44 stamp will do if you're in the United States. </p>
+
+            <!--write code here--> 
+            <form method="get" action="#" autocomplete="on">
+                <fieldset>
+                    <legend>Your info:</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" autocomplete="on" tabindex="2"><br>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" autofocus tabindex="1"><br>
+                    <label for="website">Website:</label>
+                    <input type="url" id="website" name="website" tabindex="3"><br>
+
+                    <label for="country">Country:</label>
+                    <input type="text" id="country" name="country" list="countryList"><br>
+                    <datalist id="countryList">
+                        <option value="USA"></option>
+                        <option value="Canada"></option>
+                        <option value="China"></option>
+                        <option value="Japan"></option>
+                        <option value="Taiwan"></option>
+                        <option value="Tailand"></option>
+                    </datalist>
+                    <label for="birthday">Birthday:</label>
+                    <input type="date" id="birthday" name="birthday" min="2017-08-06" max="2018-05-05"><br>
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" min="1" max="50" value="25" step="2"><br>
+                    <label for="salary">Salary:</label>
+                    <input type="range" id="age" name="salary" min="0" max="100" value="50" step="5" onchange="output.innerHTML = this.value;"><br>
+                    <output id="output">50</output><br>
+                    <label for="color">Color:</label>
+                    <input type="color" id="color" name="color"><br>
+
+
+                    <input type="submit">
+                    <hr>
+                    <label for="country">Country1:</label>
+                    <select>
+                        <optgroup label="America">
+                            <option value="USA">USA</option>
+                            <option value="Canada">Canada</option>
+                        </optgroup>
+                        <optgroup label="Asia">
+                            <option value="China">China</option>
+                            <option value="Japan">Japan</option>
+                            <option value="Taiwan">Taiwan</option>
+                            <option value="Tailand">Tailand</option>
+                        </optgroup>
+                    </select><br    >
+                    <input type="radio" name="myRdio">aaa 
+                    <input type="radio" name="myRdio">bbb 
+                    <input type="radio" name="myRdio">ccc
+                    <input type="radio" name="myRdio1">ddd
+                    <input type="radio" name="myRdio1">eee<br>
+                </fieldset>
+            </form>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </section>
+        <footer id="pageFooter"> Copyright © 2012 HTML5 VR Inc. All rights reserved. Created by anistar. </footer>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>File</title>
+
+        <style>
+            #status{
+                padding:5px;
+                font:14px/1.5 Arial, Helvetica, sans-serif;
+            }
+            #preview,#preview1{
+                width:200px;
+                background:#EEE;
+                padding:10px;
+                border:1px solid #333;
+                display: none;
+            }
+        </style>
+
+        <script src="../jquery.js"></script>
+        <script>
+            var file = undefined;
+            var reader = undefined;
+            $(document).ready(init);
+            function init() {
+                file = $("#fileInput")[0];//<input type="file" id="fileInput" value="">
+                $("#fileInput").on("change", fileChangeHandler);
+                reader = new FileReader();
+                $(reader).on("load", loadendHandler);
+            }
+            function fileChangeHandler() {
+                //file:input type="file"
+                //file.files: FileList
+                if (file.files.length > 0) {
+                    var selectedFile = file.files[0];//File
+                    var message = "File name:" + selectedFile.name + "<br>";
+                    message += "File size:" + selectedFile.size + "<br>";
+                    message += "File type:" + selectedFile.type + "<br>";
+                   //$("#preview1").attr("src","images/"+selectedFile.name);
+                    $("#status").html(message);
+                    reader.readAsDataURL(selectedFile);
+                }else{
+                    $("#status").html("No file selected!");
+                }
+            }
+            function loadendHandler() {
+                $("#preview").attr("src",reader.result);
+                $("#preview").fadeIn(400);
+            }
+        </script>
+    </head>
+
+    <body>
+        <div>
+            <input type="file" id="fileInput" value="" accept="image/jpeg,image/png">
+        </div>
+        <div id="status"></div>
+        <img id="preview" alt="">
+        <!--img id="preview1" alt=""-->
+    </body>
+</html>

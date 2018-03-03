@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>GeoLocation</title>
+
+        <script src="../jquery.js"></script>
+        <script>
+
+            var geo = undefined;
+            $(document).ready(init);
+            function init() {
+                if(geo = getGeoLocation()){//編給值邊判斷undefined是沒值傳給getGeoLocation所以geo = getGeoLocation是false
+                    $("#title").text("support")
+                }else{
+                      $("#title").text("not support")
+                }
+            }
+
+            function getGeoLocation() {
+//                alert("geo:"+navigator.geolocation);
+                if(navigator.geolocation){
+                    return navigator.geolocation;
+                }else{
+                    return undefined;
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1 id="title">GEO Location Sample.</h1>
+    </body>
+</html>

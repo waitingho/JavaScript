@@ -1,0 +1,86 @@
+﻿<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Inline Editor</title>
+        <style type="text/css">
+            #status {
+                margin-bottom: 15px;
+                padding: 5px 10px;
+                border: 1px solid #CCC;
+                border-radius: 10px;
+                background: black;
+                color: white;
+            }
+            #content {
+                width: 450px;
+                height: 100px;
+                border: 1px dashed black;
+                padding: 10px;
+            }
+            #copy {
+                display: none;
+                margin: 5px 10px 10px;
+                float: right;
+            }
+            #copy:hover {
+                background: red;
+                color: white;
+            }
+        </style>
+        <!--匯入jQuery-->
+        <script src="../jquery.js"></script>
+        <script>
+            //init事件註冊
+            $(document).ready(init);
+            function init() {
+                //檢查有無支援contentEditable
+                //alert($("#editable")[0].contentEditable);//No
+                //alert($("<div>")[0].contentEditable != undefined);
+                if ($("<div>")[0].contentEditable != undefined) {
+                    //顯示支援度
+                    $("h1").text("Support!");
+                    //editable click 事件註冊 
+                    $("#editable").click(buttonShowHandler);
+                    //document click 事件註冊 
+                    $(document).click(buttonHideHandler);
+                    //copy buttton click 事件註冊
+                    $("#copy").click(copyHandler);
+                } else {
+                    //顯示支援度
+                    $("h1").text("Not support!");
+                }
+            }
+
+            //按鈕顯示邏輯
+            function buttonShowHandler(e) {
+                $("#copy").css("display", "block");
+                $("#status").text("Click copy button to copy text!");
+                e.stopPropagation();
+            }
+
+            //按鈕隱藏邏輯
+            function buttonHideHandler(e) {
+                $("#copy").css("display", "none");
+                $("#status").text("Click text area to edit text.");
+            }
+
+            //資料複製
+            function copyHandler(e) {
+                var textStr= $("#editable").text();
+                $("#status").text(textStr);
+                e.stopPropagation();
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <div id="status">Click text area to edit text.</div>
+        <h1>Inline Editor</h1>
+        <div id="content">
+            <div id="editable" contenteditable="true">HTML is the standard's standard and it certainly doesn't use tables for layout. </div>
+            <button id="copy">Copy</button>
+        </div>
+    </body>
+</html>

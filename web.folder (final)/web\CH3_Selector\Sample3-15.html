@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Structural Selectors</title>
+
+        <style>
+            #item_a{
+                background:#CCC;
+            }
+
+            #item_b{
+                background:#DDD;
+            }
+
+            #item_c{
+                background:#EEE;
+            }
+
+            /*write code here*/
+            ul li:first-child{
+                background: red;
+            }
+            ul li:last-child{
+                background: green;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Structural</h1>
+        <ul id="item_a">
+            <li>ITEM A-1</li>
+            <li>ITEM A-2</li>
+            <li>ITEM A-3</li>
+            <li>ITEM A-4</li>
+        </ul>
+        <ul id="item_b">
+            <li>ITEM B-1</li>
+            <li>ITEM B-2</li>
+            <li>ITEM B-3</li>
+        </ul>
+        <ul id="item_c">
+            <li>ITEM C-1</li>
+        </ul>
+        <ul id="item_d">
+            <li></li>
+        </ul>
+    </body>
+</html>

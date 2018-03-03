@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Drop & Drop File</title>
+
+        <style>
+            #dropBox{
+                width:400px;
+                background:#EEE;
+                padding:10px;
+                border:1px solid #333;
+            }
+
+            img{
+                width:100%;
+            }
+        </style>
+
+        <script src="../jquery.js"></script>
+        <script>
+            //todo
+            var dropBox = undefined;
+            var reader = undefined;
+            var image = undefined;
+
+            $(document).ready(init);
+            function init() {
+                dropBox = $("#drobox");
+                //拖曳事件
+                dropBox.on("dragover", dragoverHandler);
+                //放置事件
+                dropBox.on("drop", dropHandler);
+            }
+
+            function dragoverHandler(e) {
+                console.log("drop", dropHandler);
+            }
+
+            function dropHandler(e) {
+                //讀檔
+                e.preventDefault();
+                console.log("drop");
+                var selectedFile = e.originalEvent.dataTransfer.files[0];//file
+                var fileType = selectedFile.type;//image/png image/jpeg=> 0   //text/html => -1
+
+                if (fileType.indexOf("image") == -1) {
+                    alert("Only accept image file!");
+                    return;
+                }
+            }
+            //讀檔完畢
+            function loadendHandler() {
+
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <div id="dropBox">Drop image to here.</div>
+    </body>
+</html>
+

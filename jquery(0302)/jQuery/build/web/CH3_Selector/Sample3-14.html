@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Target</title>
+        <style>
+            #tabs{
+                padding:0;
+                margin:0;
+            }
+
+            #tabs li{
+                list-style:none;
+                float:left;
+                margin-right:5px;
+            }
+
+            a.tab{
+                text-decoration:none;
+                background:#666;
+                padding:5px;
+                color:white;
+            }
+
+            #container{
+                clear:both;
+                position:relative;
+            }
+
+            #container h1{
+                font:26px Tahoma, Geneva, sans-serif;
+                font-weight:bold;
+                color:#069;
+                margin:0;
+                margin-bottom:5px;
+            }
+            /*write code here todo*/
+            .tab_content{
+                padding: 10px;
+                border: 1px solid black;
+                width:300px;
+                height:200px;
+                position: absolute;
+                background: #eee;
+            }
+            .tab_content{
+                z-index: 1;
+            }
+        </style>
+        <script src="../jquery.js"></script>
+        <script>
+        </script>
+    </head>
+
+    <body>
+        <h1>Target</h1>
+        <ul id="tabs">
+            <li><a href="#tab1" class="tab">TAB 1</a></li>
+            <li><a href="#tab2" class="tab">TAB 2</a></li>
+            <li><a href="#tab3" class="tab">TAB 3</a></li>
+        </ul>
+        <div id="container">
+            <div id="tab1" class="tab_content">
+                <h1>Use The Logo</h1>
+                You have HTML5 on the brain. Tell the world.
+            </div>
+            <div id="tab2" class="tab_content">
+                <h1>Show Some Love</h1>
+                This HTML5 logo is licensed under Creative Commons Attribution 3.0 — all are free to use and reimagine as they see fit. Stickers and T-Shirts are available now; more stuff to come.
+            </div>
+            <div id="tab3" class="tab_content">
+                <h1>HTML5 in the Wild</h1>
+                The HTML5 logo gallery (below) shows off community creativity. We invite you to submit your sightings, whether screen shots or movies or cupcakes.
+            </div>
+        </div>
+    </body>
+</html>

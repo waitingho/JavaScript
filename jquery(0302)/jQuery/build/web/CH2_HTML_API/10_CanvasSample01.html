@@ -1,0 +1,40 @@
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Canvas</title>
+
+        <script src="../jquery.js"></script>
+        <script>
+            $(document).ready(init);
+            function init() {
+                var image = new Image();
+                $(image).on("load", loadCompleteHandler);
+                $(image).attr("src", "images/magicLapse_banner.jpg");
+            }
+
+            function loadCompleteHandler() {
+                var canvas = $("#banner")[0];
+                var ctx = canvas.getContext("2d");
+                ctx.drawImage(this, 0, 0);
+
+                ctx.strokeStyle = "red";
+                ctx.lineWidth = 30;
+                ctx.lineJoin = "miter";
+                ctx.beginPath();
+                ctx.moveTo(200, 100);
+                ctx.lineTo(200, 200);
+                ctx.lineTo(800, 200);
+                ctx.stroke();
+            }
+        </script>
+    </head>
+
+    <body>
+        <canvas id="banner" width="910" height="425">
+            Your browser does not support canvas. Please upgrade to the lastest version of Chrome, Firefox or Safari.
+        </canvas>
+        <img src="images/magicLapse_banner.jpg">
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Negation Pseudo</title>
+
+        <style>
+            img{
+                border:5px solid #CCC;
+                cursor:pointer;
+            }
+            /*write code here*/
+            img:not([alt~=thumb]){
+                border:5px solid red;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <h1>Gallery</h1>
+            <img src="images/HTML5_poster.png" alt="HTML5 poster">
+            <img src="images/clouds_thumb.jpg" alt="clouds thumb">
+            <img src="images/helicopters_thumb.jpg" alt="helicopters thumb">
+            <img src="images/html5_thumb.jpg" alt="html5 thumb">
+            <img src="images/type_thumb.jpg" alt="type thumb">
+        </div>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Javascript</title>
+        <style type="text/css">
+        </style>
+        <script type="text/javascript">
+            //alert(typeof(3>4));
+            /* var rain = false;
+             var sunny = false
+             if (rain) {
+             document.write("在家聽音樂" + "<br />");
+             } else {
+             if (sunny) {
+             document.write("出門去爬山" + "<br />");
+             }else{
+             document.write("出門去逛街" + "<br />");
+             }
+             }
+             */
+            // alert("Alert!");
+            //var result = confirm("confirm!");
+            //var result =prompt("Prompt!","");
+            //document.write("result="+result + "<br />");
+            //alert(isNaN("3.5"));//false
+            //alert(isNaN("abc"));//true
+            /*
+            var result = prompt("Please input an integer!", "");
+            alert(result);
+            if (result != 0 && result == parseInt(result)) {
+                if (result % 2 == 0) {
+                    document.write("Even" + "<br />");
+                } else {
+                    document.write("Odd" + "<br />");
+                }
+            } else {
+                document.write("Error!" + "<br />");
+            }
+           */
+            var year = prompt("Please input an year!", "");
+            if (year > 0 && year == parseInt(year)) {
+                if(year%4 == 0 && year%100 != 0 || year%400 == 0){
+                    document.write("閏" + "<br />");
+                }else{
+                    document.write("平" + "<br />");
+                }
+            } else{
+                 document.write("Error!" + "<br />");
+            }
+             
+            
+            if (true || true && false){
+                document.write("True" + "<br />");
+            }else{
+                document.write("False" + "<br />");
+            }
+        </script>
+    </head>
+
+    <body>
+    </body>
+</html>

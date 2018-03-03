@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>GeoLocation</title>
+
+        <script src="../jquery.js"></script>
+        <script>
+        
+            var geo = undefined;
+            $(document).ready(init);
+            function init() {
+                if(geo = getGeoLocation()){
+                    $("#title").text("Support!")
+                }else{
+                    $("#title").text("Not support!")
+                }
+            }
+
+            function getGeoLocation() {
+                if(navigator.geolocation){
+                    return navigator.geolocation;
+                }else{
+                    return undefined;
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1 id="title">GEO Location Sample.</h1>
+    </body>
+</html>

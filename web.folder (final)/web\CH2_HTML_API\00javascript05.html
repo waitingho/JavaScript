@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+        <style>
+        </style>
+        <script>
+            var ar = [0, 1, 2];
+            console.log(ar);
+            ar.push("dog");
+            console.log(ar);
+            console.log(ar.pop());
+            console.log(ar);
+
+            ar.unshift("cat");
+            console.log(ar);
+            console.log(ar.shift());
+            console.log(ar);
+            console.log("==========================");
+
+            ar.splice(ar.length, 0, "dog");
+            console.log(ar);
+            console.log(ar.splice(ar.length - 1, 1)[0]);
+            console.log(ar);
+
+            ar.splice(0, 0, "cat");
+            console.log(ar);
+            console.log(ar.splice(0, 1)[0]);
+            console.log(ar);
+
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
+

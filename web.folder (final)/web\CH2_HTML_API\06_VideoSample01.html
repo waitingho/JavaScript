@@ -1,0 +1,124 @@
+﻿<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Video Player</title>
+
+        <style>
+            #videoPlayer{
+                background:#CCC;
+                padding:10px;
+                border:1px solid #666;
+                box-shadow:5px 5px 5px #666;
+                margin-bottom:10px;
+            }
+
+            #fullscreenButton{
+                background:red;
+                color:white;
+            }
+            video{
+                width:100%;
+            }
+        </style>
+
+        <script src="../jquery.js"></script>
+        <script>
+            var video = undefined;
+            $(document).ready(init);
+            function init() {
+                $("#playButton").click(playHandler);
+                $("#pauseButton").click(pauseHandler);
+                $("#volumeUpButton").click(volumeUpHandler);
+                $("#volumeDownButton").click(volumeDownHandler);
+                $("#fullscreenButton").click(fullscreenHandler);
+                video = $("#videoPlayer")[0];
+                //video 事件註冊
+                $("#videoPlayer").on("play", startPlayHandler);
+                $("#videoPlayer").on("timeupdate", timeUpdateHandler);
+                $("#videoPlayer").on("ended", endedHandler);
+
+                audio.volume = 0.2;
+                //全螢幕按鈕 事件註冊
+
+
+            }
+            //播放
+            function playHandler()
+            {
+                video.play();
+            }
+            //暫停
+            function pauseHandler()
+            {
+                video.pause();
+            }
+            //加音量
+            function volumeUpHandler()
+            {
+                video.volume += 0.1;
+            }
+            //減音量
+            function volumeDownHandler()
+            {
+                video.volume -= 0.1;
+            }
+            //播放開始
+            function startPlayHandler() {
+                $("#status").text("start play!");
+            }
+            //播放歷程
+            function timeUpdateHandler() {
+                // var message="currentTime:"+audio.currentTime+" / duration:"+audio.duration;
+                var message = convert(video.currentTime) + " / " + convert(video.duration);
+                $("#status").text(message);
+            }
+            function convert(timeInput) {
+                var mins = parseInt(timeInput / 60);
+                var secs = parseInt(timeInput % 60);
+                //secs = secs<10 ? "0"+secs : secs;
+                if (secs < 10)
+                    secs = "0" + secs;
+                return mins + ":" + secs;
+            }
+            //播放結束
+            function endedHandler() {
+                $("#status").text("ended play!");
+                video.src="images/movie.mp4";
+                video.poster="images/icon1.png";
+                video.controls=false;
+                video.autoplay=true;
+            }
+            //全螢幕
+            function fullscreenHandler(e) {
+                //alert(video.mozRequestFullScreen);
+                if (video.webkitEnterFullscreen) {
+                    video.webkitEnterFullscreen();//webkit //chrome safari
+                } else if (video.mozRequestFullScreen) {
+                    video.mozRequestFullScreen();//mozilla //firefox
+                } else if (video.msRequestFullscreen) {
+                    video.msRequestFullscreen();//ie edge
+                } else {
+                    alert("Fullscreen API is not supported");
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <div>
+            <input type="button" id="playButton" value="Play">
+            <input type="button" id="pauseButton" value="Pause">
+            <input type="button" id="volumeUpButton" value="+">
+            <input type="button" id="volumeDownButton" value="-">
+            <input type="button" id="fullscreenButton" value="Full Screen">
+        </div>
+
+        <div id="status">Information</div>
+        <!--write code here-->
+        <video id="videoPlayer" controls poster="images/poster.png"><!--width="320" height="240" controls loop muted autoplay-->
+            <source src="images/test.mp4" type="video/mp4">
+            Your browser does not support the <code>video</code> tag.
+        </video>
+    </body>
+</html>

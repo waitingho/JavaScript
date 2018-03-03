@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Attribute</title>
+
+        <style>
+            a{
+                display:block;
+                padding:5px;
+                margin:5px;
+                background:red;
+                color:white;
+            }
+
+            a[href]{
+                background:blue;
+                text-decoration:none;
+                font-weight:bold;
+            }
+            /*write code here*/
+            a[href="home.html"]{
+                background:green;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <ul>
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="download.html">DOWNLOAD</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="help.html">HELP</a></li>
+            </ul>
+            <a id="more">More Information</a>
+        </div>
+    </body>
+</html>

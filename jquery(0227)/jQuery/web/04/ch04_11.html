@@ -14,23 +14,23 @@
         <script type="text/javascript" src="../jquery.js"></script>
         <script type="text/javascript">
             $(document).ready(init);
-//     TODO       function init()
-//            {
-//                $("#myform").submit(submitHandler);
-//            }
-//            var checkInput = true;
-//            function submitHandler() {
-//                 checkInput = true;
-//                $("#myform :input :not(:submit)").each(eachFunction);
-//                return checkInput;
-//            }
-//            function eachFunction(index) {
-//                var inputValue = $(this).val();
-//                if (inputValue == "") {
-//                    alert("PLZ input " + $(this).attr("name"));
-//                    checkInput = false;
-//                }
-//            }
+            function init()
+            {
+                $("#myform").submit(submitHandler);
+            }
+            var checkInput = true;
+            function submitHandler() {
+                checkInput = true;
+                $("#myform :input :not(:submit)").each(eachFunction);
+                return checkInput;
+            }
+            function eachFunction(index) {
+                var inputValue = $(this).val();
+                if (inputValue == "") {
+                    alert("PLZ input " + $(this).attr("name"));
+                    checkInput = false;
+                }
+            }
         </script>  
     </head>
     <body>

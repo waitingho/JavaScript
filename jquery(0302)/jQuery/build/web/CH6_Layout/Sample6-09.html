@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Flexible Box Layout</title>
+
+        <style>
+            #container{
+                border:1px dashed black;
+
+                display:-webkit-flex;
+
+                display:flex;
+
+                -webkit-flex-direction:row;
+                flex-direction:row;
+
+                width:800px;
+                height:500px;
+
+                -webkit-align-items:center;
+                align-items:center;
+
+                /*write code here*/
+                justify-content: space-around;
+            }
+
+            .boxitem{
+                width:80px;
+                height:50px;
+                border:1px solid black;
+                background:#F90;
+                text-align:center;
+                padding-top:30px;
+                font-weight:bold;
+                color:white;
+                text-shadow:0 2px 2px black;
+            }
+
+            #item1{
+                -webkit-order: 5;
+                order: 5;
+            }
+
+            #item2{
+                -webkit-order: 1;
+                order: 1;
+            }
+
+            #item3{
+                -webkit-order: 2;
+                order: 2;
+            }
+
+            #item4{
+                -webkit-order: 3;
+                order: 3;
+            }
+
+            #item5{
+                -webkit-order: 4;
+                order: 4;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="container">
+            <div id="item1" class="boxitem">CHILD 1</div>
+            <div id="item2" class="boxitem">CHILD 2</div>
+            <div id="item3" class="boxitem">CHILD 3</div>
+            <div id="item4" class="boxitem">CHILD 4</div>
+            <div id="item5" class="boxitem">CHILD 5</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Pseudo</title>
+        <style>
+            #subscribe{
+                width:400px;
+                height:220px;
+                background:#FC6;
+                padding:20px;
+            }
+
+            #subscribe h1{
+                margin:0;
+            }
+
+            /*write code here*/
+            #subscribe label{
+                display:block;
+                width:50px;
+                float:left;
+                margin-right:10px;
+            }
+            input[type="text"]{
+                width:250px;
+                border:none;
+                border-bottom: 1px dashed #888;
+                background: #eee;
+            }
+            #email:enabled{
+                broder: 1px dashed #888;
+            }
+            #email:disabled{
+                border:none;
+                background: #444;
+            }
+            #agree:checked{
+                margin-right: 15px;
+            }
+        </style>
+        <script src="../jquery.js"></script>
+        <script>
+            $(document).ready(init);
+            function init() {
+                $("#agree").change(changeHandler);
+            }
+            function changeHandler(e){
+                if(e.target.checked){
+                    $("#email").removeAttr("disabled");
+                }else{
+                    $("#email").attr("disabled","");
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="subscribe">
+            <h1>personal information</h1>
+            <p>
+                <label>Name</label>
+                <input id="name" name="name" type="text">
+            </p>
+            <p>
+                <label>Phone</label>
+                <input id="phone" name="phone" type="text">
+            </p>
+            <p>
+                <input id="agree" name="agree" type="checkbox" value="subscribe" checked>
+                Please send me monthly discounts!
+            </p>
+            <p>
+                <label>Email</label>
+                <input id="email" name="email" type="text" disabled="abc">
+            </p>
+        </div>
+    </body>
+</html>

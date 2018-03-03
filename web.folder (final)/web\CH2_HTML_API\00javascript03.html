@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+        <style>
+            #outer{
+                border:1px gray solid;
+                background: silver;
+                height: 200px;
+                width:200px;
+            }
+            #inner{
+                border:1px gray solid;
+                background: pink;
+                height: 100px;
+                width:100px;
+                margin: 33px 49px 49px 49px;
+            }
+        </style>
+        <script>
+            window.addEventListener("load", init);
+            function init() {
+                var outer = document.getElementById("outer");
+                outer.addEventListener("click", outerHandler, false);//useCapture:false
+                var inner = document.getElementById("inner");
+                inner.addEventListener("click", innerHandler);
+                inner.addEventListener("click", secondHandler);
+            }
+            function outerHandler(e) {
+                console.log("outerHandler this.id:" + this.id + " target.id:" + e.target.id);
+            }
+            function innerHandler(e) {
+                //e.stopPropagation();
+                e.stopImmediatePropagation();
+                console.log("innerHandler this.id:" + this.id + " target.id:" + e.target.id);
+            }
+            function secondHandler(e) {
+                console.log("Second Handler!");
+            }
+
+        </script>
+    </head>
+    <body>
+        <div id="outer">Outer
+            <div id="inner">Inner</div>
+        </div>
+    </body>
+</html>
+

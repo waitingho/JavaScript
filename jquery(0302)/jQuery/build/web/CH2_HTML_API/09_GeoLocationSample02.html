@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>GeoLocation</title>
+
+        <script src="../jquery.js"></script>
+        <script>
+            var geo = undefined;
+
+            $(document).ready(init);
+            function init() {
+                //判斷是否支援Geo Location
+                if (geo = getGeoLocation()) {
+                    $("#title").text("Geolocation is supported.");
+                    geo.getCurrentPosition(showCoords);
+                } else {
+                    $("#title").text("Geolocation is not supported.");
+                }
+            }
+
+            function getGeoLocation() {
+                if (navigator.geolocation) {
+                    return navigator.geolocation;
+                } else {
+                    return undefined;
+                }
+            }
+
+            function showCoords(e) {
+                var lat = e.coords.latitude;
+                var lon = e.coords.longitude;
+                $("#latitude").text(lat.toString());
+                $("#longitude").text(lon.toString());
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <h1 id="title">GEO Location Sample.</h1>
+        <table>
+            <tr>
+                <th>Latitude</th>
+                <th>Longitude</th>
+            </tr>
+            <tr>
+                <td id="latitude"></td>
+                <td id="longitude"></td>
+            </tr>
+        </table>
+    </body>
+</html>

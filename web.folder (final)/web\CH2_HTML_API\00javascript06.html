@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript</title>
+        <style>
+        </style>
+        <script>
+            var price = 0;
+            var stops = 0;
+            var station = prompt("請輸入站名：");
+            switch (station) {
+                case "板橋":
+                    price += 10;
+                    stops++;
+                case "台北":
+                    price += 20;
+                    stops++;
+                case "台中":
+                    price += 30;
+                    stops++;
+                case "台南":
+                    price += 40;
+                    stops++;
+                case "左營":
+                    document.write("價格：" + price + "，一共有" + stops + "站");
+                    break;
+                default:
+                    document.write("錯誤！無此站！");
+            }
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
+

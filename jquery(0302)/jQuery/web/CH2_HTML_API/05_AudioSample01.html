@@ -1,0 +1,111 @@
+﻿<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Audio Player</title>
+
+        <style>
+            body{
+                padding:10px;
+            }
+            #title{
+                background:black;
+                color:white;
+                padding:5px 15px;
+                font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+                font-size:25px;
+                width:167px;
+                margin:0px;
+            }
+            #cover{
+                background:#EEE;
+                padding:10px;
+                border:1px solid #666;
+                width:175px;
+                box-shadow:3px 3px 5px #AAA;
+            }
+            #audioPlayer{
+                display:block;
+            }
+            #status{
+                position:absolute;
+                left:18px;
+                top:200px;
+                text-align:center;
+                width:198px;
+                background:rgba(0, 0, 0, 0.5);
+                color:white;
+                padding:5px 0 5px 0;
+            }
+        </style>
+        <script src="../jquery.js"></script>
+        <script>
+            var audio;
+            $(document).ready(init);
+            function init() {
+                $("#playButton").click(playHandler);
+                $("#pauseButton").click(pauseHandler);
+                $("#volumeUpButton").click(volumeUpHandler);
+                $("#volumeDownButton").click(volumeDownHandler);
+                audio = $("#audioPlayer")[0];
+
+                $("#audioPlayer").on("play", startplayHandler);
+                $("#audioPlayer").on("timeupdate", timeupdateHandler);
+                $("#audioPlayer").on("ended", endedplayHandler);
+
+            }
+            function startplayHandler() {
+                $("#status").text("star play");
+            }
+            function timeupdateHandler() {
+
+//                var message = "currentTime:" + current + "/ duration" + audio.duration;
+                var message=convert(audio.currentTime)+"/"+convert(audio.duration);
+                $("#status").text(message);
+            }
+            function convert(timeInput){
+                var mins=parseInt(timeInput/60);
+                var secs=parseInt(timeInput%60);
+                secs=secs<10 ? "0"+secs:secs;
+                return mins+":"+secs;
+                //todo if
+            }
+            function endedplayHandler() {
+                $("#status").text("ended play");
+            }
+            function playHandler() {
+                audio.play();
+            }
+            function pauseHandler() {
+                audio.pause();
+            }
+            function volumeUpHandler() {
+                audio.volume += 0.1;
+            }
+            function volumeDownHandler() {
+                audio.volume -= 0.1;
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1 id="title">My World - WE ARE FM</h1>
+        <div>
+            <img id="cover" src="images/song1.jpg">
+            <!--write code here-->
+            <audio id ="audioPlayer" controls><!--controls autoplay loop-->
+                <source src="images/song2.mp3" type="audio/mpeg">
+                Your browser does not support the <code>audio</code> tag.
+            </audio>
+
+
+        </div>
+        <div>
+            <input type="button" id="playButton" value="play">
+            <input type="button" id="pauseButton" value="pause">
+            <input type="button" id="volumeUpButton" value="+">
+            <input type="button" id="volumeDownButton" value="-">
+        </div>
+        <div id="status">Information</div>
+    </body>
+</html>

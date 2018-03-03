@@ -1,0 +1,50 @@
+HEADER:
+	HTML5 Feature List
+	HTML5 Tags
+	HTML5 APIs
+	CSS3 Feature List
+	CSS3 Selectors
+	CSS3 Effects
+		
+NAVIGATION:
+	Introduction
+	Showcase
+	Download
+	Contact US
+
+INFORMATION:
+	Build It And They Will Come
+
+	The Tech­nology
+	Imagination, meet implementation. HTML5 is the cornerstone of the W3C's open web platform; a framework designed to support innovation and foster the full potential the web has to offer. Heralding this revolutionary collection of tools and standards, the HTML5 identity system provides the visual vocabulary to clearly classify and communicate our collective efforts.
+		
+	The Movement
+	You're excited about HTML5; we are too. You've not just been enjoying the HTML5-powered web already — you're building it! As adoption and inspiration spreads, the web community will find creative ways to apply HTML5 and related technologies, spark trends, and capture best practices. As momentum builds, we hope you bring this logo along for the ride and paint the world orange.
+
+NEWS:
+	Free Stickers!
+	Free Information
+	images/html5-stickers.png
+	Please send a No. 10 business envelope to accommodate all three stickers, see below for more details and international shipping. Make sure to include enough postage to return a sticker pack via U.S. mail. It's less than one ounce, so a standard $0.44 stamp will do if you're in the United States.  
+
+FOOTER:
+	Copyright © 2012 HTML5 VR Inc. All rights reserved. Created by anistar. 
+
+FIGURE:
+	HTML5 relational website
+	Amzing HTML5
+	It stands strong and true, resilient and universal as the markup you write. It shines as bright and as bold as the forward-thinking, dedicated web developers you are. It's the standard's standard, a pennant for progress. And it certainly doesn't use tables for layout.
+
+DEFINITION:
+	HTML5 & CSS3 Introduction
+	HTML5
+	Tim Berners-Lee invented the "World Wide Web" in 1989, and the Internet took off in the 1990s.
+	WHATWG will develop HTML as a "Living Standard".
+	W3C will develop a definitive HTML5 and XHTML5 standard.
+	CSS3
+	CSS3 is completely backwards-compatible with earlier versions of CSS.
+	Most of the new CSS3 properties are implemented in modern browsers.
+
+
+
+

@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Flexible Box Layout</title>
+
+        <style>
+            body{margin: 0px;}
+            #container{
+                border:1px dashed black;
+
+                display:-webkit-flex;
+                display:flex;
+
+                /*modify code here*/
+                -webkit-flex-direction:row;
+                flex-direction:row-reverse;/*column row column-reverse row-reverse  */
+            }
+
+            .boxitem{
+                width:120px;
+                height:50px;
+                border:1px solid black;
+                background:#F90;
+                text-align:center;
+                padding-top:30px;
+                font-weight:bold;
+                color:white;
+                text-shadow:0 2px 2px black;
+            }
+            #item1{
+                -webkit-flex-grow:0;
+                flex-grow:0;
+                flex-shrink: 0;
+                order:5;
+            }
+            #item2{
+                -webkit-flex-grow:1;
+                flex-grow:1;
+                flex-shrink: 0;
+                order:2;
+            }
+            #item3{
+                -webkit-flex-grow:2;
+                flex-grow:2;
+                flex-shrink: 0;
+                order:2;
+            }
+            #item4{
+                -webkit-flex-grow:3;
+                flex-grow:3;
+                flex-shrink: 0;
+                order:1;
+            }
+            #item5{
+                -webkit-flex-grow:4;
+                flex-grow:4;
+                flex-shrink: 0;
+                order:4;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="container">
+            <div id="item1" class="boxitem">CHILD 1</div>
+            <div id="item2" class="boxitem">CHILD 2</div>
+            <div id="item3" class="boxitem">CHILD 3</div>
+            <div id="item4" class="boxitem">CHILD 4</div>
+            <div id="item5" class="boxitem">CHILD 5</div>
+        </div>
+    </body>
+</html>

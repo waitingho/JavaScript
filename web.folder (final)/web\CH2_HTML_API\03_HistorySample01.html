@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>History</title>
+        <style>
+            /*ul{background: pink;}
+            li{background: yellow;}
+            a{background: cyan;}*/
+            a{
+                text-decoration:none;
+                padding:5px;
+            }
+
+            a:hover{
+                background:red;
+                color:white;
+            }
+        </style>
+        <script src="../jquery.js"></script>
+        <script>
+            //Data JSON
+            var data = {
+                User1: {name: "Ken", age: 21},
+                User2: {name: "Mary", age: 22},
+                User3: {name: "Carol", age: 23},
+                User4: {name: "Tony", age: 24}
+            }
+            /* 
+             document.write("data.User1=" + data.User1 + "<br>");//{name: "Ken", age: 21}
+             document.write("data.User1=" + data.User1.name + "<br>");//"Ken"
+             document.write("data[\"User1\"]=" + data["User1"] + "<br>");//{name: "Ken", age: 21}
+             document.write("data[\"User1\"].name=" + data["User1"].name + "<br>");//"Ken"
+             */
+            $(document).ready(init);
+            function init() {
+                //$("body").append("<span>SPAN<span>");
+                if (history) {
+                    $("#status").text("Support");
+                    $("#examples").click(clickHandler);
+                } else {
+                    $("#status").text("Not support");
+                }
+            }
+            //click處理邏輯
+            function clickHandler(e) {
+                e.preventDefault();
+                if (e.target.nodeName == "A") {
+                    //e.target: <a href="first">User1</a>
+                    var title = $(e.target).text();//"User1"
+                    var url = $(e.target).attr("href");//first
+                    //data["User1"];//{name: "Ken", age: 21}
+                    //data["User1"].name;//"Ken"
+                    var message = data[title].name + " : "+data[title].age;
+                    $("#output").text(message);
+                    history.pushState(data[title],null,url);
+                }
+            }
+            /*
+             var data = {
+                    User1: {name: "Ken", age: 21},
+                    User2: {name: "Mary", age: 22},
+                    User3: {name: "Carol", age: 23},
+                    User4: {name: "Tony", age: 24}
+             }
+             */
+        </script>
+    </head>
+
+    <body>
+        <article>
+            <p id="status">HTML5 History API not supported</p>
+            <p>Use the back and forward buttons in your browser to navigate the history.</p>
+            <ul id="examples">
+                <li><a href="first">User1</a></li>
+                <li><a href="second">User2</a></li>
+                <li><a href="third">User3</a></li>
+                <li><a href="fourth">User4</a></li>
+            </ul>
+            <div id="output"></div>
+        </article>
+    </body>
+</html>
