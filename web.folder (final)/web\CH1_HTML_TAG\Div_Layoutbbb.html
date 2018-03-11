@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Div Layout HTML4</title>
+        <style type="text/css">
+            body{
+                margin:0px;
+                padding:0px;
+            }
+
+            div,header,footer,article,aside,nav,section,figure,dl{
+                border:2px #333 solid;
+                margin:5px;
+            }
+            #main{
+                width:90%;
+                min-width:850px;
+                max-width:950px;
+                margin:auto;
+                background:#eee;
+            }
+            .header,.footer{
+                height:100px;
+            }
+            .content{
+                height:600px;
+            }
+            .level1{
+                background:#ccc;
+            }
+            .level2{
+                background:#aaa;
+                float:left;
+            }
+            .content1{
+                width:15%;
+                height:74%;
+            }
+            .content2{
+                width:81.5%;
+                height:50%;
+            }
+            .content3{
+                width:81.5%;
+                height:21.5%;
+            }
+            .content4{
+                width:98%;
+                height:100px;
+                overflow: auto;
+            }
+            .level3{
+                background:#888;
+                float:left;
+            }
+            .content2inner1{
+                width:98%;
+                height:20%;
+            }
+            .content2inner2{
+                width:98%;
+                height:65%;
+            }
+            .content3inner1{
+                width:30%;
+                height:75%;
+            }
+            .content3inner2{
+                width:66%;
+                height:75%;
+            }
+            ul{
+                list-style-type:none;
+            }
+            li a{	
+                text-decoration:none;
+                color:black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="main">
+            <header class="header level1">&lt;header&gt;公司logo/動畫 </header>
+            <section class="content level1">&lt;section&gt;content <br/>
+                <nav class="content1 level2">&lt;nav&gt; 公司連結<br/>
+                    <ul>
+                        <li><a href="#">link01</a></li>
+                        <li><a href="#">link02</a></li>
+                        <li><a href="#">link03</a></li>
+                        <li><a href="#">link04</a></li>
+                    </ul>
+                </nav>
+
+                <section class="content2 level2">&lt;section&gt;content2 <br/>
+                    <header class="content2inner1 level3">&lt;header&gt;文章標題 </header>
+                    <article class="content2inner2 level3">&lt;article&gt;文章內文 <br><br>
+                        &lt;h1&gt;<br>&lt;h2&gt;<br>&lt;p&gt;
+                    </article>
+                </section>
+
+                <section class="content3 level2">&lt;section&gt; content3 <br/>
+                    <figure class="content3inner1 level3">&lt;figure&gt;content3 inner1  <br>
+                        &lt;figcaption&gt;&lt;img&gt;照片/圖表<br> 
+                    </figure>
+                    <dl class="content3inner2 level3">&lt;dl&gt;content3 inner2 <br>
+                        &lt;dl&gt;&lt;dt&gt;&lt;dd&gt;專有名詞
+                    </dl>		
+                </section>
+
+                <aside class="content4 level2">&lt;aside&gt;content4 
+                    <p>留言 1</p><p>comment 2</p><p>comment 3</p><p>comment 4</p>
+                </aside>
+            </section>
+            <footer class="footer level1">&lt;footer&gt;公司聯絡資訊 <br><br></footer>
+        </div>
+    </body>
+</html>
